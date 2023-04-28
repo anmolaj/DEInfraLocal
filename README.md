@@ -1,2 +1,2 @@
 # DEInfraLocal
-Local setup for Infra
+Local setup for Infra for Data oriented practices
