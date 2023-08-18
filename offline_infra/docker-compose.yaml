@@ -1,0 +1,15 @@
+services:
+  minio:
+    image: quay.io/minio/minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    command:  minio server /data --console-address ":9001"
+  pyspark:
+    container_name: pyspark
+    image: jupyter/pyspark-notebook:latest
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+      - "4041:4041"
+    command: start-notebook.sh --NotebookApp.token=''
