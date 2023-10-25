@@ -14,6 +14,11 @@
         - Realtime
     - MLOps (ml_ops)
 
+## Architecture Flow
+
+![backend](images/backend.png)
+
+
 ## Tools (TBD)
 - Kafka
 - Minio (S3 interface)
