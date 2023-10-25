@@ -22,6 +22,9 @@
 - Label Studio (Annotator)
 - Mlflow / W&B (Model Registry)
 
+## Docker
+You ll need a local docker daemon to initiate the different tooling. I am using Rancher desktop but there is also docker desktop available. 
+- Info on Rancher Desktop: https://rancherdesktop.io
 
 ## Minio
 We ll leverage Minio which provides us with api similar to aws s3 and added benefit it provides UI to nivaigate through objects
