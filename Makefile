@@ -1,6 +1,9 @@
-run-local:
-	docker compose up -d
+start-local-backend:
+	docker compose -f backend/docker-compose.yaml up
 
 
-stop-local:
-	docker compose down -d
+stop-local-backend:
+	docker compose -f backend/docker-compose.yaml down 
+
+create-crypto-bucket:
+	aws --endpoint-url http://localhost:9000 s3api  create-bucket --bucket crypto
