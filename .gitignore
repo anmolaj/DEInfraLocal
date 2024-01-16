@@ -1,2 +1,8 @@
 __pycache__
 data/
+.ipynb_*
+
+#Extras created by iceberg implementation
+metastore_db
+derby.log
+warehouse
