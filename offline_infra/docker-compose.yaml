@@ -9,7 +9,7 @@ services:
     container_name: pyspark
     image: jupyter/pyspark-notebook:latest
     volumes:
-      - ./spark/notebook:/home/jovyan/work/notebook
+      - ../spark/notebook:/home/jovyan/work/notebook
     ports:
       - "8888:8888"
       - "4040:4040"
