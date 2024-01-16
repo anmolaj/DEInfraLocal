@@ -45,6 +45,9 @@ Scala does have advantages which can be found online given the contributions in 
 
 Details on the image being used can be found here: https://jupyter-docker-stacks.readthedocs.io/en/latest/using/specifics.html
 
+- UI access for the spark jupyter labs: http://localhost:8888/
+- Sample notebook is checked in under `spark/notebooks`
+- Example excuted will create appropriate logs and directory under `spark`
 
 ## Running local container
 - To spin up the service:
