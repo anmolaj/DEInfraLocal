@@ -39,6 +39,15 @@ We ll leverage Minio which provides us with api similar to aws s3 and added bene
 - UI access: localhost:9001
     Ref Link: https://min.io
 
+## PySpark
+PySpark is more commonly used for most cases and I personally have been encouraging python over scala.
+Scala does have advantages which can be found online given the contributions in spark and better integration for ML libraries we will leverage python for our infrastrusture.
+
+Details on the image being used can be found here: https://jupyter-docker-stacks.readthedocs.io/en/latest/using/specifics.html
+
+- UI access for the spark jupyter labs: http://localhost:8888/
+- Sample notebook is checked in under `spark/notebooks`
+- Example excuted will create appropriate logs and directory under `spark`
 
 ## Running local container
 - To spin up the service:
