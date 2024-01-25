@@ -1,3 +1,4 @@
+version: "3.9"
 services:
   minio:
     image: quay.io/minio/minio
@@ -8,10 +9,17 @@ services:
   pyspark:
     container_name: pyspark
     image: jupyter/pyspark-notebook:latest
-    volumes:
-      - ../spark/notebook:/home/jovyan/work/notebook
     ports:
       - "8888:8888"
       - "4040:4040"
       - "4041:4041"
-    command: start-notebook.sh --NotebookApp.token=''
+    volumes:
+      - notebook:/home/jovyan/work/notebook
+    command: start-notebook.sh --NotebookApp.token='' && chown joyvan:joyvan /home/jovyan/work/notebook
+volumes:
+  notebook:
+    driver: local # Define the driver and options under the volume name
+    driver_opts:
+      type: none
+      device: ../spark/notebook
+      o: bind
