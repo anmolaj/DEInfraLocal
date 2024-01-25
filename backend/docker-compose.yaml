@@ -5,6 +5,8 @@ services:
     ports:
       - "9000:9000"
       - "9001:9001"
+    volumes:
+      - minio_storage:/data
     command:  minio server /data --console-address ":9001"
   zookeeper:
     image: confluentinc/cp-zookeeper:5.3.0
@@ -110,3 +112,10 @@ services:
       KAFKA_CLUSTERS_0_KAFKACONNECT_0_NAME: connect
       KAFKA_CLUSTERS_0_KAFKACONNECT_0_ADDRESS: http://kafka-connect:28082
       DYNAMIC_CONFIG_ENABLED: 'true'
+volumes:
+  minio_storage:
+    driver: local # Define the driver and options under the volume name
+    driver_opts:
+      type: none
+      device: ../datasets/
+      o: bind
