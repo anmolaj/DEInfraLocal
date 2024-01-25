@@ -28,8 +28,11 @@
 - Mlflow / W&B (Model Registry)
 
 ## Docker
-You ll need a local docker daemon to initiate the different tooling. I am using Rancher desktop but there is also docker desktop available. 
+You ll need a local docker daemon to initiate the different tooling. I am using Docker desktop but there is also Rancher desktop available. 
+
+I faced issues mounting volumes using Rancher daemon and hence reverted to docker desktop
 - Info on Rancher Desktop: https://rancherdesktop.io
+- Info on Docker Desktop: https://docs.docker.com/desktop/
 
 ## Minio
 We ll leverage Minio which provides us with api similar to aws s3 and added benefit it provides UI to nivaigate through objects
