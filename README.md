@@ -41,6 +41,8 @@ We ll leverage Minio which provides us with api similar to aws s3 and added bene
     - password: `minioadmin`
 - UI access: localhost:9001
     Ref Link: https://min.io
+- The `/data` path is mounted to `/datasets` in this repository and that is where you ll see all the data transactions happening when you run the commands
+- Data is not being checked in and we ll rather provide commands to download/create the datasets and see the results when as the commands are executed
 
 ## PySpark
 PySpark is more commonly used for most cases and I personally have been encouraging python over scala.
