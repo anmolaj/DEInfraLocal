@@ -1,5 +1,5 @@
 start-local-backend:
-	docker compose -f backend/docker-compose.yaml up
+	docker compose -f backend/docker-compose.yaml up -d
 
 
 stop-local-backend:
