@@ -1,5 +1,5 @@
 __pycache__
-data/
+datasets/
 .ipynb_*
 
 #Extras created by iceberg implementation
