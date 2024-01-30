@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   minio:
+    container_name: minio
     image: quay.io/minio/minio
     ports:
       - "9000:9000"
@@ -15,6 +16,7 @@ services:
       - "4041:4041"
     volumes:
       - notebook:/home/jovyan/work/notebook
+      - datasets:/home/jovyan/work/datasets
     command: start-notebook.sh --NotebookApp.token='' && chown joyvan:joyvan /home/jovyan/work/notebook
 volumes:
   notebook:
@@ -22,4 +24,10 @@ volumes:
     driver_opts:
       type: none
       device: ../spark/notebook
+      o: bind
+  datasets:
+    driver: local # Define the driver and options under the volume name
+    driver_opts:
+      type: none
+      device: ../datasets
       o: bind
