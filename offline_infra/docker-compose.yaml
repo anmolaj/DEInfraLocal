@@ -6,6 +6,8 @@ services:
     ports:
       - "9000:9000"
       - "9001:9001"
+    volumes:
+      - datasets:/data
     command:  minio server /data --console-address ":9001"
   pyspark:
     container_name: pyspark
