@@ -1,2 +1,4 @@
 kafka-python==2.0.2
 requests==2.27.1
+awscli==1.32.31
+sparksql-magic==0.0.3
