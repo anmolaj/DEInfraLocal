@@ -11,7 +11,7 @@ services:
     command:  minio server /data --console-address ":9001"
   pyspark:
     container_name: pyspark
-    image: jupyter/pyspark-notebook:latest
+    build: .
     ports:
       - "8888:8888"
       - "4040:4040"
