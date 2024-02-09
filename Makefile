@@ -14,3 +14,6 @@ stop-local-offline:
 
 create-crypto-bucket:
 	aws --endpoint-url http://localhost:9000 s3api  create-bucket --bucket crypto
+
+create-sample-bucket:
+	aws --endpoint-url http://localhost:9000 s3api  create-bucket --bucket sample-datasets
